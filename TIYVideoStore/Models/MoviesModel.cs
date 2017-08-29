@@ -18,7 +18,7 @@ namespace TIYVideoStore.Models
         public string MovieDescription { get; set; }
         [ForeignKey("GenreID")]
         public int GenreID { get; set; }
-        public GenreModel GenreModel { get; set; }
+        public GenresModel GenresModel { get; set; }
 
     }
 }

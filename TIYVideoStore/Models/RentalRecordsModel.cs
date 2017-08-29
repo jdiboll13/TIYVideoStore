@@ -11,11 +11,11 @@ namespace TIYVideoStore.Models
 
         [ForeignKey("MovieID")]
         public int MovieID { get; set; }
-        public MovieModel MovieModel { get; set; }
+        public MoviesModel MoviesModel { get; set; }
 
         [ForeignKey("CustomerID")]
         public int CustomerID { get; set; }
-        public CustomerModel CustomerModel { get; set; }
+        public CustomersModel CustomersModel { get; set; }
         public DateTime RentalDate { get; set; }
         public DateTime DueDate { get; set; }
         public DateTime ReturnDate { get; set; }
