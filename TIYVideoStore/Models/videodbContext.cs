@@ -1,11 +1,16 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using TIYVideoStore.Models;
 
-namespace TIYVideoStore
+namespace TIYVideoStore.Models
 {
     public partial class videodbContext : DbContext
     {
+        public DbSet<CustomerModel> Customers { get; set; }
+        public DbSet<GenreModel> Genres { get; set; }
+        public DbSet<MovieModel> Movies { get; set; }
+        public DbSet<RentalRecordModel> RentalRecords { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -16,6 +21,6 @@ namespace TIYVideoStore
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {}
+        { }
     }
 }

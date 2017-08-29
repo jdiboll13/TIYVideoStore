@@ -11,9 +11,10 @@ using TIYVideoStore.Models;
 namespace TIYVideoStore.Migrations
 {
     [DbContext(typeof(videodbContext))]
-    partial class videodbContextModelSnapshot : ModelSnapshot
+    [Migration("20170829153338_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
