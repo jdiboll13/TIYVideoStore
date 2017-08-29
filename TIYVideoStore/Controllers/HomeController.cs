@@ -10,6 +10,12 @@ namespace TIYVideoStore.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly videodbContext _context;
+
+        public HomeController(videodbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
             return View();
