@@ -8,7 +8,7 @@ using TIYVideoStore.Models;
 
 namespace TIYVideoStore.Controllers
 {
-    public class GenreController : Controller
+    public class GenresController : Controller
     {
         
         public IActionResult Index()

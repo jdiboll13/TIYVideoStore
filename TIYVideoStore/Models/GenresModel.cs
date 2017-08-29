@@ -10,12 +10,11 @@ using TIYVideoStore.Models;
 
 namespace TIYVideoStore.Models
 {
-    public class CustomerModel
+    public class GenresModel
     {
         [Key]
-        public int CustomerID { get; set; }
-        public string CustomerName { get; set; }
-        public string CustomerPhone { get; set; }
-        
+        public int GenreID { get; set; }
+        public string GenreName { get; set; }
+
     }
 }
