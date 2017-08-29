@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using TIYVideoStore.Models;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace TIYVideoStore.Models
 {
