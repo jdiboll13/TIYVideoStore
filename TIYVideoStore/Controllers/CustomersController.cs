@@ -6,6 +6,12 @@ namespace TIYVideoStore.Controllers
 {
     public class CustomersController : Controller
     {
+        private readonly videodbContext _context;
+
+		public CustomersController(videodbContext context)
+		{
+			_context = context;
+		}
         
         public IActionResult Index()
         {

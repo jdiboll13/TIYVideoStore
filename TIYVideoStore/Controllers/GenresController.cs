@@ -6,6 +6,12 @@ namespace TIYVideoStore.Controllers
 {
     public class GenresController : Controller
     {
+        private readonly videodbContext _context;
+
+		public GenresController(videodbContext context)
+		{
+			_context = context;
+		}
         
         public IActionResult Index()
         {
