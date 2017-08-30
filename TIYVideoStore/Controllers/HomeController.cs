@@ -12,22 +12,19 @@ namespace TIYVideoStore.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult About()
+        public IActionResult Overdue()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 
-        public IActionResult Contact()
+        public IActionResult Return()
         {
-            ViewData["Message"] = "Your contact page.";
-
             return View();
         }
 
