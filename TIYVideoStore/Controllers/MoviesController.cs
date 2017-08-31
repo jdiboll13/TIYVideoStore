@@ -15,7 +15,8 @@ namespace TIYVideoStore.Controllers
         
         public IActionResult Index()
         {
-            return View();
+            var service = new MovieService(_context);
+            return View(service.GetAllMovies());
         }
         public IActionResult Create()
         {
