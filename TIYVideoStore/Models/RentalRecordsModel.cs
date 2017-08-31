@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TIYVideoStore.Models
 {
-    public class RentalRecordModel
+    public class RentalRecordsModel
     {
         [Key]
         public int RentalID { get; set; }

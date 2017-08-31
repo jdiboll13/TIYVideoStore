@@ -7,7 +7,7 @@ namespace TIYVideoStore.Models
         public DbSet<CustomersModel> Customers { get; set; }
         public DbSet<GenresModel> Genres { get; set; }
         public DbSet<MoviesModel> Movies { get; set; }
-        public DbSet<RentalRecordModel> RentalRecords { get; set; }
+        public DbSet<RentalRecordsModel> RentalRecords { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

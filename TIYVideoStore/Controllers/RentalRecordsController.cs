@@ -1,3 +1,4 @@
+using System;
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -16,13 +17,29 @@ namespace TIYVideoStore.Controllers
         
         public IActionResult Index()
         {
-            var currentMovies = _context.Movies.ToList();
-            return View(currentMovies);
+            var service = new MovieService(_context);
+            return View(service.GetAllMovies());
         }
 
-        public IActionResult Create()
+        public IActionResult Create(int ID)
+        {   
+            var movieForm = new MovieService(_context);
+            return View(movieForm.CreateRentalRecord());
+        }
+
+        [HttpPost]
+        public IActionResult CreateRecord(int movie, int customer, DateTime rentaldate, DateTime duedate)
         {
-            return View();
+            var newRecord = new RentalRecordsModel
+            {
+                MovieID = movie,
+                CustomerID = customer,
+                RentalDate = rentaldate,
+                DueDate = duedate
+            };
+            _context.RentalRecords.Add(newRecord);
+            _context.SaveChanges();
+            return Redirect("Index");
         }
         public IActionResult Delete()
         {
